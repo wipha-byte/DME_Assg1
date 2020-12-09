@@ -18,19 +18,46 @@
   <ion-app>
     <ion-tabs>
 
-      <ion-tab tab="home">
+      <ion-tab tab="list">
         <ion-header translucent>
-          <ion-toolbar>
+          <ion-toolbar color="primary">
             <ion-title>Home</ion-title>
           </ion-toolbar>
         </ion-header>
 
         <ion-content fullscreen class="ion-padding">
-          <h1>My Page</h1>
+                   <ion-item>
+            <ion-label position="fixed">Entry Title</ion-label>
+            <ion-input id="entryTitle" placeholder="placeholder"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="fixed">Caption</ion-label>
+            <ion-input id="entryCaption" placeholder="placeholder"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime id="dateInput" value="1990-02-19" placeholder="Select Date"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Picture</ion-label>
+            <ion-input id="url" placeholder="URL"></ion-input>
+          </ion-item>
+
+        </ion-list>
+  
+          <ion-item>
+            <ion-label position="stacked">Textarea</ion-label>
+            <ion-textarea id="content-input" placeholder="placeholder"></ion-textarea>
+          </ion-item>
+        </ion-list>
+
+        <ion-button id="submit-btn" expand="block">Add Entry</ion-button>
+        <ion-button onclick="window.location.href='index.html'" id="journal-btn" color="danger "expand="block">Back</ion-button>
+      </ion-content>
         </ion-content>
       </ion-tab>
 
-      <ion-tab tab="tracker">
+      <ion-tab tab="budget">
         <ion-header translucent>
           <ion-toolbar>
             <ion-title>Tracker</ion-title>
@@ -50,22 +77,23 @@
         </ion-header>
 
         <ion-content fullscreen class="ion-padding">
-          <h1>My Journal</h1>
+          <section id="card-content">
+          </section>
         </ion-content>
       </ion-tab>
 
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-          <ion-label>Music</ion-label>
-          <ion-icon name="musical-note"></ion-icon>
+        <ion-tab-button tab="list">
+          <ion-label>List</ion-label>
+          <ion-icon name="list"></ion-icon>
         </ion-tab-button>
-        <ion-tab-button tab="tracker">
-          <ion-label>Movies</ion-label>
-          <ion-icon name="videocam"></ion-icon>
+        <ion-tab-button tab="budget">
+          <ion-label>Budget</ion-label>
+          <ion-icon name="md-cash"></ion-icon>
         </ion-tab-button>
         <ion-tab-button tab="journal">
-          <ion-label>Games</ion-label>
-          <ion-icon name="game-controller"></ion-icon>
+          <ion-label>Journal</ion-label>
+          <ion-icon name="book"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
