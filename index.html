@@ -12,6 +12,7 @@
       --ion-safe-area-top: 20px;
       --ion-safe-area-bottom: 22px;
     }
+
   </style>
 </head>
 <body>
@@ -52,7 +53,7 @@
         </ion-list>
 
         <ion-button id="submit-btn" expand="block">Add Entry</ion-button>
-        <ion-button onclick="window.location.href='index.html'" id="journal-btn" color="danger "expand="block">Back</ion-button>
+        <ion-button id="clear-btn" color="danger "expand="block">Clear</ion-button>
       </ion-content>
         </ion-content>
       </ion-tab>
@@ -60,12 +61,44 @@
       <ion-tab tab="budget">
         <ion-header translucent>
           <ion-toolbar>
-            <ion-title>Tracker</ion-title>
+            <ion-title>Profile</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content fullscreen class="ion-padding">
-          <h1>Tracker</h1>
+        <ion-content id="profile-page" fullscreen class="ion-padding">
+          <ion-card>
+            <ion-avatar>
+              <img class="center" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+            </ion-avatar>
+            <ion-item>
+              <ion-label position="fixed">First Name: </ion-label>
+              <ion-input id="firstName-input" placeholder="First Name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="fixed">Last Name</ion-label>
+              <ion-input id="lastName-input" placeholder="Last Name"></ion-input>
+            </ion-item>
+          </ion-card>
+          <ion-list>
+            <ion-item>
+              <ion-label>Gender</ion-label>
+              <ion-select id="gender-input"value="Gender">
+                <ion-select-option value="female">Female</ion-select-option>
+                <ion-select-option value="male">Male</ion-select-option>
+                <ion-select-option value="other">Other</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="fixed">Email</ion-label>
+              <ion-input id="email-input" placeholder="abc@mail.com" type="email"></ion-input>
+            </ion-item>
+            </ion-list>
+            <ion-card>
+              <p id="p-name">Jane Doe</p>
+              <p id="p-gender">Female</p>
+              <p id="p-email">email</p></ion-card>
+              <ion-button id="edit-profile" expand="block">Edit Profile</ion-button>
+    
         </ion-content>
       </ion-tab>
 
