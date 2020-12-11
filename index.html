@@ -66,10 +66,7 @@
         </ion-header>
 
         <ion-content id="profile-page" fullscreen class="ion-padding">
-          <ion-card>
-            <ion-avatar>
-              <img class="center" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-            </ion-avatar>
+
             <ion-item>
               <ion-label position="fixed">First Name: </ion-label>
               <ion-input id="firstName-input" placeholder="First Name"></ion-input>
@@ -78,7 +75,6 @@
               <ion-label position="fixed">Last Name</ion-label>
               <ion-input id="lastName-input" placeholder="Last Name"></ion-input>
             </ion-item>
-          </ion-card>
           <ion-list>
             <ion-item>
               <ion-label>Gender</ion-label>
@@ -89,15 +85,35 @@
               </ion-select>
             </ion-item>
             <ion-item>
+              <ion-label>Birthday</ion-label>
+              <ion-datetime id="birthday-input" value="" placeholder="DD/MM/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-item>
               <ion-label position="fixed">Email</ion-label>
               <ion-input id="email-input" placeholder="abc@mail.com" type="email"></ion-input>
             </ion-item>
+
             </ion-list>
             <ion-card>
-              <p id="p-name">Jane Doe</p>
-              <p id="p-gender">Female</p>
-              <p id="p-email">email</p></ion-card>
-              <ion-button id="edit-profile" expand="block">Edit Profile</ion-button>
+              <!--<ion-avatar>
+                <img class="center" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+              </ion-avatar>-->
+                <ion-list>
+                  <ion-item>
+                    <ion-label id="p-name">Name</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label id="p-gender">Gender</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label id="p-birthday">Birthday</ion-label>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label id="p-email">Email</ion-label>
+                  </ion-item>
+                    </ion-list>
+              <ion-button id="edit-profile" expand="block">Update Profile</ion-button>
+              <ion-button id="reset-profile" color="danger" expand="block">Reset Profile</ion-button>
     
         </ion-content>
       </ion-tab>
@@ -106,11 +122,18 @@
         <ion-header translucent>
           <ion-toolbar>
             <ion-title>Journal</ion-title>
+              <ion-buttons slot="primary">
+                <ion-button onclick="toggleReorder()">Toggle</ion-button>
+              </ion-buttons>
           </ion-toolbar>
         </ion-header>
 
         <ion-content fullscreen class="ion-padding">
-          <section id="card-content">
+          <section>
+            <ion-reorder-group id="card-content">
+
+            </ion-reorder-group>
+            <ion-button id="clear-journal-btn" color="danger "expand="block">Clear All</ion-button>
           </section>
         </ion-content>
       </ion-tab>
