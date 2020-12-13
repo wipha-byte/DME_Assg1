@@ -63,6 +63,7 @@ clearBtn.addEventListener("click", function(){
   textContentInput.value = "";
 });
 
+//toggle to reorder
 function toggleReorder() {
   const reorderGroup = document.getElementById('card-content');
   reorderGroup.disabled = !reorderGroup.disabled;
@@ -74,7 +75,10 @@ function toggleReorder() {
 clearJournalBtn.addEventListener("click",function(){
   $("#card-content").empty();
 })
+
+
 //Profile
+//profile variables
 var editProfileBtn = document.querySelector("#edit-profile");
 var resetProfileBtn = document.querySelector("#reset-profile")
 var createProfileBtn = document.querySelector("#create-profile");

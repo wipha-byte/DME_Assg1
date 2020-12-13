@@ -22,22 +22,22 @@
       <ion-tab tab="list">
         <ion-header translucent>
           <ion-toolbar color="primary">
-            <ion-title>Home</ion-title>
+            <ion-title>Add Entry</ion-title>
           </ion-toolbar>
         </ion-header>
 
         <ion-content fullscreen class="ion-padding">
                    <ion-item>
             <ion-label position="fixed">Entry Title</ion-label>
-            <ion-input id="entryTitle" placeholder="placeholder"></ion-input>
+            <ion-input id="entryTitle" placeholder="Title"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label position="fixed">Caption</ion-label>
-            <ion-input id="entryCaption" placeholder="placeholder"></ion-input>
+            <ion-input id="entryCaption" placeholder="Caption"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>Date</ion-label>
-            <ion-datetime id="dateInput" value="1990-02-19" placeholder="Select Date"></ion-datetime>
+            <ion-datetime id="dateInput" value="" placeholder="Select Date"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Picture</ion-label>
@@ -58,9 +58,9 @@
         </ion-content>
       </ion-tab>
 
-      <ion-tab tab="budget">
+      <ion-tab tab="profile">
         <ion-header translucent>
-          <ion-toolbar>
+          <ion-toolbar color="primary">
             <ion-title>Profile</ion-title>
           </ion-toolbar>
         </ion-header>
@@ -72,12 +72,12 @@
               <ion-input id="firstName-input" placeholder="First Name"></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label position="fixed">Last Name</ion-label>
+              <ion-label position="fixed">Last Name: </ion-label>
               <ion-input id="lastName-input" placeholder="Last Name"></ion-input>
             </ion-item>
           <ion-list>
             <ion-item>
-              <ion-label>Gender</ion-label>
+              <ion-label>Gender: </ion-label>
               <ion-select id="gender-input"value="Gender">
                 <ion-select-option value="female">Female</ion-select-option>
                 <ion-select-option value="male">Male</ion-select-option>
@@ -85,7 +85,7 @@
               </ion-select>
             </ion-item>
             <ion-item>
-              <ion-label>Birthday</ion-label>
+              <ion-label>Birthday: </ion-label>
               <ion-datetime id="birthday-input" value="" placeholder="DD/MM/YYYY"></ion-datetime>
             </ion-item>
             <ion-item>
@@ -95,6 +95,9 @@
 
             </ion-list>
             <ion-card>
+              <ion-card-header>
+                Profile
+              </ion-card-header>
               <!--<ion-avatar>
                 <img class="center" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
               </ion-avatar>-->
@@ -120,7 +123,7 @@
 
       <ion-tab tab="journal">
         <ion-header translucent>
-          <ion-toolbar>
+          <ion-toolbar color="primary">
             <ion-title>Journal</ion-title>
               <ion-buttons slot="primary">
                 <ion-button onclick="toggleReorder()">Toggle</ion-button>
@@ -143,9 +146,9 @@
           <ion-label>List</ion-label>
           <ion-icon name="list"></ion-icon>
         </ion-tab-button>
-        <ion-tab-button tab="budget">
-          <ion-label>Budget</ion-label>
-          <ion-icon name="md-cash"></ion-icon>
+        <ion-tab-button tab="profile">
+          <ion-label>Profile</ion-label>
+          <ion-icon name="md-person"></ion-icon>
         </ion-tab-button>
         <ion-tab-button tab="journal">
           <ion-label>Journal</ion-label>
